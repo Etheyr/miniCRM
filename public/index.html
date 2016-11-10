@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Mini CRM</title>
+
+	<link rel="stylesheet" href="./node_modules/semantic-ui-css/semantic.css">
+	<link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+	<div class="ui green three item inverted menu">
+		<a class="active item">
+			Inscription
+		</a>
+		<a class="item">
+			User 
+		</a>
+	</div>
+
+
+	<div id="ins">
+		<h1 class="ui dividing header">Inscription</h1>
+
+		<div class="ui container">
+			<form action="/public" class="ui form" method="post">
+				<div id="menu">
+
+
+					<div class="field">
+						<input id="id" type="hidden"  name="id">
+					</div>
+
+
+					<div class="field">
+						<label for="last_name">Prénom</label>
+						<div class="ui large inverted left icon input">
+							<input id="last_name" type="text" placeholder="Prénom" name="last_name">
+							<i class="user icon"></i>
+						</div>
+					</div>
+
+
+					<div class="field">
+						<label for="first_name">Nom</label>
+						<div class="ui large inverted left icon input">
+							<input id="first_name" type="text" placeholder="Nom" name="first_name">
+							<i class="user icon"></i>
+						</div>
+					</div>
+
+
+					<div class="field">
+						<label for="company">company</label>
+						<div class="ui large inverted left icon input">
+							<i class="users icon"></i>
+							<input id="company" type="text" placeholder="company" name="company">
+						</div>
+					</div>
+
+
+					<div class="field">
+						<label for="role">Role</label>
+						<div class="ui large inverted left icon input">
+							<i class="sitemap icon"></i>
+							<input id="role" type="text" placeholder="Role" name="role">
+						</div>
+					</div>
+
+
+					<div class="field">
+						<label for="phone">Numero</label>
+						<div class="ui large inverted left icon input">
+							<i class="call icon"></i>
+							<input id="phone" type="text" placeholder="Numero" name="phone">
+						</div>
+
+
+						<div class="field">
+							<label for="email">Email</label>
+							<div class="ui large inverted left icon input">
+								<i class="mail icon"></i>
+								<input id="email" type="text" placeholder="Email" name="email">
+							</div>
+						</div>
+
+
+						<div class="field">
+							<label for='description'>description</label>
+							<textarea id="description" name="description"></textarea>
+						</div>
+
+
+						<button id="save" class="ui large button green labeled icon" id="buttonSave">
+							<i class="icon save"></i> Enregistrer 
+						</button>
+
+					</div>
+				</form>
+			</div>
+		</div>
+
+
+		<h1 class="ui dividing header">User profil</h1>
+
+		<div id="json"></div>
+
+		<script src="node_modules/jquery/dist/jquery.js"></script>
+		<script src="app.js"></script>
+
+	</body>
+	</html>
